@@ -5,10 +5,9 @@ CREATE DATABASE songs_dev;
 
 CREATE TABLE songs (
   id SERIAL PRIMARY KEY,
-  title VARCHAR(255),
-  artist VARCHAR(255),
-  album VARCHAR(255),
-  genre VARCHAR(255),
-  time VARCHAR(255),
+  name TEXT NOT NULL,
+  artist TEXT NOT NULL,
+  album TEXT NOT NULL,
+  time TEXT NOT NULL,
   is_favorite BOOLEAN
 );
