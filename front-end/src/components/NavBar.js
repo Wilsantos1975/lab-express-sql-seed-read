@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <nav className="nav-bar">
       <h1>
-        <Link to="/songs">tuner app</Link>
+        <Link to="/">tuner app</Link>
       </h1>
       <button>
         <Link to="/songs/new">add a song</Link>

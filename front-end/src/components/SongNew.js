@@ -46,7 +46,7 @@ function SongNew() {
     };
 
   return (
-    <div>
+    <div className="Form">
       <h1>add a song</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">name</label>

@@ -16,20 +16,52 @@
 
 main {
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  
+}
 
-    width: 90%;
-    margin: auto;
+main h1 {
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 
 
 
+.Form {
+    margin: auto;
+    width: 70%;
+}
 
+input[type],textarea {
+    display: block;
+    width: 30%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    width: 30%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    margin: 0 10px 0 0;
+    width: 15%;
+}
 
 .song-details {
+   
   width: calc(33.33% - 10px);
   margin-bottom: 20px;
   padding: 10px;

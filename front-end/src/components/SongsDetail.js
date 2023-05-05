@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -9,6 +9,7 @@ const API = process.env.REACT_APP_API_URL;
 function SongsDetail() {
   const [song, setSong] = useState([]);
   const { id } = useParams();
+  let navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -20,6 +21,18 @@ function SongsDetail() {
         console.warn("catch", e);
       });
   }, [id]);
+
+  const deleteSong = () => {
+    axios
+      .delete(`${API}/songs/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        navigate("/songs");
+      })
+      .catch((e) => {
+        console.warn("catch", e);
+      });
+  };
 
   return (
     <div className="song-details">
@@ -41,7 +54,7 @@ function SongsDetail() {
             </Link>
           </div>
           <div>
-            <button>delete</button>{" "}
+            <button onClick={deleteSong}>delete</button>{" "}
           </div>
 
           <div>
