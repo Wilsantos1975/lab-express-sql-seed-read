@@ -1,5 +1,5 @@
 const express = require("express");
-const song = express.Router();
+const song = express.Router({ mergeParams: true});
 const {
   getAllSongs,
   getSong,

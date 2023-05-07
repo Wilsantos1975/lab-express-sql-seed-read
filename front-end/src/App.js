@@ -8,11 +8,13 @@ import New from "./pages/New";
 import Edit from "./pages/Edit";
 import FourOFour from "./pages/FourOFour";
 
+import AlbumIndex from "./pages/AlbumIndex";
+
 function App() {
   return (
     <div className="">
-        <NavBar />
         <main>
+        <NavBar />
       <Routes>
         <Route path="/" element={<Home/>}/>
           <Route path="/songs" element={<Index />} />
@@ -20,6 +22,10 @@ function App() {
           <Route path="/songs/new" element={<New />} />
           <Route path="/songs/:id/edit" element={<Edit/>} />
           <Route path="*" element={<FourOFour />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/albums" element={<AlbumIndex/>}/>
       </Routes>
         </main>
     </div>
